@@ -1,0 +1,202 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+div#header-container {
+  height: 110px;
+  padding: 0px;
+  border: thin dotted rgb(177, 177, 176);
+}
+
+div#header-logo {
+  height: 100px;
+  margin: 5px;
+}
+
+div#header-logo img {
+  height: 100%;
+}
+
+div#footer-container {
+  height: 120px;
+  padding: 10px;
+  border: thin dotted lightgrey;
+}
+
+div#footer-container img {
+  height: 100px;
+}
+
+div#content-container > div {
+  min-height: 480px;
+  margin: 0;
+  margin-left: 4px;
+}
+
+a.active {
+  font-weight: bolder;
+}
+
+nav.primary-menu a.nav-link {
+  background-color: lightblue;
+  color: black;
+  border-top: dotted thin grey;
+}
+
+nav.secondary-menu a.nav-link.active {
+  background-color: lightgrey;
+  color: black;
+}
+
+#login-container.card {
+  width: 100%;
+}
+
+#widget.card {
+  padding: 4px;
+  margin: 4px;
+  width: 256px;
+  border-radius: 24px;
+  margin-bottom: 16px;
+}
+
+#widget.card:hover {
+  background-color: lightgrey;
+}
+
+#widget .card-body {
+  padding: 0;
+}
+
+#widget .card-body > h4 {
+  background-color: lightgrey;
+  padding: 12px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+#widget .card-text {
+  height: 160px;
+  padding: 4px;
+}
+
+#widget.card button {
+  width: 100%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+
+/* for notification styles */
+#notification-container-main {
+  position: fixed;
+  top: 1%;
+  right: 41%;
+  z-index: 9999999;
+  display: flex;
+  flex-direction: column;
+  min-width: 15%;
+}
+
+#notification-container-main > div {
+  animation: slide-in 0.2s;
+  transition: all 0.3s ease;
+}
+
+.notification {
+  width: 350px;
+  max-width: 100%;
+  font-size: 0.875rem;
+  pointer-events: auto;
+  background-color: rgba(255, 255, 255, 0.938);
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  margin-bottom: 10px;
+}
+
+.notification-container {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 100%;
+  pointer-events: none;
+}
+.notification-container > :not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: large;
+  padding: 0.5rem 0.75rem;
+  color: #ffffff;
+  background-clip: padding-box;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+}
+.notification-header .btn-close {
+  margin-right: -0.375rem;
+  margin-left: 0.75rem;
+  color: rgb(255, 255, 255);
+}
+.notification-header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.padding-left-5 {
+  padding-left: 5px;
+}
+
+.notification-body {
+  padding: 0.75rem;
+  word-wrap: break-word;
+  font-size: medium;
+  font-weight: 500;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.success {
+  background-color: #198754;
+}
+
+.error {
+  background-color: #DC3545;
+}
+
+.info {
+  background-color: #078ca7;
+}
+
+.warning {
+  background-color: #FFC107;
+}
+
+.ConfirmDialog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
